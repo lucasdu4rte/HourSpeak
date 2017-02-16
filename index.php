@@ -11,13 +11,19 @@
 			{
 				var pIni = document.getElementById('periodoIni');
 				var pFim = document.getElementById('periodofim');
-				var intAlert = document.getElementById('intervaloAlerta');
-
-				if (h >= pIni) e (h<=pFim) {
-					switch (intAlert){
+				var selI = document.getElementById('intervaloAlerta').selectedIndex;
+				var opcao = document.getElementById('intervaloAlerta').options; //array com as opções
+				
+				if (h >= pIni && h<=pFim) {
+					switch (opcao[selI].text){
 						case 10:
+							if (0 == m%10) {responsiveVoice.speak(h+" Horas e "+m+" Minutos.", "Brazilian Portuguese Female")} //Somente multiplus de 10, como 0,10,20...
 						case 20:
+
 						case 30:
+
+						case 60:
+
 					}
 				}
 
@@ -71,7 +77,12 @@
 				<button type="button" onclick="">Aplicar</button>
 			</li>
 			<li>Intervalo
-			<input type="number" min="10" max="60" step="10" id="intervaloAlerta" maxlength="2" size="2" value="30">
+			<select id="intervaloAlerta">
+				<option>10</option>
+				<option>20</option>
+				<option>30</option>
+				<option>60</option>
+			</select>
 			<button type="button" onclick="">Aplicar</button>
 			</li>
 			<li></li>
