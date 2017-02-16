@@ -1,0 +1,14 @@
+body{
+	font-family: Arial, sans-serif, Verdana;
+	font-size: 20px;
+	background-color: #e5e5e5;
+}
+
+h1{
+	text-align: center;
+	
+}
+
+ul li{
+	display: inline;
+}

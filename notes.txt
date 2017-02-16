@@ -1,0 +1,8 @@
+Ferramenta com a finalidade de deixar o úsuario sob controle de seus horários,
+com um simples Relógio interativo, que notifica a hora exata por audio e/ou notificação,
+
+
+ 
+http://codare.net/2009/04/03/javascript-obter-e-mostrar-data-e-hora/
+http://responsivevoice.org/api/
+http://www.linhadecodigo.com.br/artigo/3493/tratando-eventos-conforme-data-e-horario-em-javascript.aspx
