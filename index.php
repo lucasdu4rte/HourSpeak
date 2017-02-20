@@ -4,6 +4,19 @@
 	<link rel="stylesheet" type="text/css" href="estilos.css">
 
 		<script src="responsivevoice.js"></script>
+
+		<audio id="audio">
+		   <source type="audio/mp3"  src="noft.mp3" >
+		</audio>
+
+		<script type="text/javascript">
+			audio = document.getElementById('audio');
+
+			function play(){
+			   audio.play();
+			}
+		</script>
+
 		<script type="text/javascript">
 
 			//Função que verifica se Alerta deve ser acionado
@@ -62,11 +75,13 @@
 				m = agora.getMinutes();
 				s = agora.getSeconds();
 
+				play();
 				responsiveVoice.speak(h+" Horas e "+m+" Minutos e "+s+ " segundos", "Brazilian Portuguese Female")
 
 			}
 
 		</script>
+
 	</head>
 	<body onload="time()">
 	<!--Cebeçalho-->
