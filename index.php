@@ -1,9 +1,25 @@
-<html>
+<!DOCTYPE HTML>
+ <html lang="pt-br">
 	<head>
+		<meta charset="utf-8"/>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+		<title>HourSpeak</title>
 
-	<link rel="stylesheet" type="text/css" href="estilos.css">
 
 		<script src="responsivevoice.js"></script>
+
+		<!-- Bootstrap core CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+	    <!-- Custom styles for this template -->
+	    <link href="cover.css" rel="stylesheet">
+
+	    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+	    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	    <script src="js/ie-emulation-modes-warning.js"></script>
 
 		<audio id="audio">
 		   <source type="audio/mp3"  src="noft.mp3" >
@@ -96,36 +112,84 @@
 
 	</head>
 	<body onload="time()">
+
+
 	<!--Cebeçalho-->
-		<ul>
-			<li>Período
-				<input type="number" min="1" max="12" id="periodoIni" maxlength="2" size="2" value="7"> até
-				<input type="number" min="1" max="12" id="periodofim" maxlength="2" size="2" value="18">
-				<button type="button" onclick="">Aplicar</button>
-			</li>
-			<li>Intervalo
-			<select id="intervaloAlerta">
-				<option>10</option>
-				<option>20</option>
-				<option>30</option>
-				<option>60</option>
-			</select>
-			<button type="button" onclick="">Aplicar</button>
-			</li>
-			<li></li>
-			<li>
-				<div id="Relogio"></div>
-				<p style="font-size: 15px;">Horário de Brasília</p>
-			</li>
-		</ul>
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">HourSpeak</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <!--<form class="navbar-form  navbar-left">
+                  <div class="form-group">-->
+                   <li>
+                     <a>Período
+				     <input class="form-control" type="number" min="1" max="24" id="periodoIni" maxlength="2" size="2" value="7"> até
+				     <input class="form-control" type="number" min="1" max="24" id="periodofim" maxlength="2" size="2" value="18"></a>
+				   </li>
+				  <!--</div>
+
+				  <div class="form-group"> -->
+                   <li>
+                    <a>Intervalo
+				     <select class="form-control" id="intervaloAlerta">
+				      <option>10</option>
+				      <option>20</option>
+				      <option>30</option>
+				      <option>60</option>
+				     </select></a>
+				    
+				   </li>
+				   <!--</div>
+				 </form>-->
+                </ul>
+              </nav>
+            </div>
+          </div>
 
 	<!--Fim do Cabeçalho-->
-		<div>
-			<h3><button type="button" onclick="FalaHora()">QUE HORAS SÃO AGORA?</button></h3>
-			<p>
-				
+		
+
+		<div class="inner cover">
+            <h1 class="cover-heading">		
+            <div id="Relogio"></div>
+				<p style="font-size: 15px;">Horário de Brasília</p>
+			</h1>
+            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+            <p class="lead">
+			<h3><button class="btn btn-lg btn-default" type="button" onclick="FalaHora()">Que horas são agora?</button></h3>
 			</p>
 		</div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
 
 	</body>
 </html>
